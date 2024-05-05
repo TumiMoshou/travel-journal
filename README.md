@@ -1,19 +1,36 @@
-# co74f46f2b22693c5ea577559
+# My Travel Journal
 
-Quick start:
+## Overview
+
+This travel journal is a dynamic, responsive web application which I developed as a solo project as part of the Frontend Developer Career Path at Scrimba. It showcases various travel destinations with personalised descriptions, images, and interactive elements. This project emphasises modern web development practices and responsive design, ensuring a seamless experience across all devices.
+
+## Features
+
+- **Responsive Design**: Adapts flawlessly across devices from desktops to tablets and mobiles, ensuring accessibility and user-friendly navigation.
+- **Interactive Elements**: Utilizes React components for dynamic content management, enhancing user interaction and engagement.
+- **Accessibility**: Implements best practices to ensure the application is accessible to a wider audience.
+- **Personalized Content**: Features custom-written travel descriptions that convey a personal and relatable experience.
+
+## Technologies Used
+
+- React.js
+- CSS3
+- HTML5
+- Webpack for asset management and compilation
+- FontAwesome for icons
+
+## Setup
+
+To get this project up and running on your local machine, follow these steps:
 
 ```
-$ yarn # npm install
-$ yarn build # npm run build
+bash
+# Install dependencies
+$ yarn # or npm install
+
+# Build the project
+$ yarn build # or npm run build
 ````
-
-## Development
-
-Run Webpack in watch-mode to continually compile the JavaScript as you work:
-
-```
-$ yarn watch # npm run watch
-```
 
 ## About Scrimba
 

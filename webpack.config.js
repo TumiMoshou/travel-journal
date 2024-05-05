@@ -1,8 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-    mode: 'development', 
+    mode: 'development',
     entry: './index.js',
     output: {
         filename: 'bundle.js',
@@ -23,23 +24,39 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: [
+                    {
+                        loader: 'style-loader',
+                        options: { injectType: 'singletonStyleTag' }
+                    },
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext][query]' // This will output images to /dist/images
+                }
             }
         ]
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './index.html',
             filename: 'index.html'
         })
     ],
     devServer: {
+        hot: true,
         static: {
             directory: path.join(__dirname, 'dist'),
             publicPath: '/'
         },
         compress: true,
         port: 9000,
-        open: true
+        open: true,
+        historyApiFallback: true
     }
 };
