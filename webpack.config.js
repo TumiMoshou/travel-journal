@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin'); 
 
 module.exports = {
     mode: 'development',
@@ -36,7 +37,7 @@ module.exports = {
                 test: /\.(png|jpg|jpeg|gif|svg)$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'images/[name][ext][query]' // This will output images to /dist/images
+                    filename: 'images/[name][ext][query]'
                 }
             }
         ]
@@ -46,6 +47,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './index.html',
             filename: 'index.html'
+        }),
+        new CopyWebpackPlugin({  
+            patterns: [
+                { from: './_redirects', to: '' }  
+            ]
         })
     ],
     devServer: {
