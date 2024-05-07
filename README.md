@@ -1,8 +1,12 @@
 # My Travel Journal
 
+![My Travel Journal](my-travel-journal-screenshot.png)
+
 ## Overview
 
 This travel journal is a dynamic, responsive web application which I developed as a solo project as part of the Frontend Developer Career Path at Scrimba. It showcases various travel destinations with personalised descriptions, images, and interactive elements. This project emphasises modern web development practices and responsive design, ensuring a seamless experience across all devices.
+
+Check out the live version here: [My Travel Journal on Netlify](https://classy-smakager-00d429.netlify.app/)
 
 ## Features
 
